@@ -10,6 +10,6 @@ app.use(express.static(__dirname + '/public'));
 app.use('/', routes);
 
 var server = app.listen(3000, function () {
-  var port = server.address().port;
+  var port = process.env.PORT;
   console.log('Server up and listening on', port);
 });
